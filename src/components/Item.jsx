@@ -3,7 +3,9 @@ const Item = ({ item }) => {
     <>
       <li key={item.id}>
         <input type="checkbox" />
-        {item.description} {item.quantity}
+        <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+          {item.description} {item.quantity}
+        </span>
         <button>❌</button>
       </li>
     </>
